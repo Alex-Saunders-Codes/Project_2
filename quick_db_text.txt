@@ -1,0 +1,84 @@
+llp_domains
+-
+llp_id PK INT
+llp_name VARCHAR
+
+school_information
+-
+school_id PK INT
+school_name VARCHAR(45)
+school_section VARCHAR(20)
+alp_category VARCHAR
+alp_title VARCHAR
+llp_id1 INT FK >- llp_domains.llp_id
+llp_title1 VARCHAR
+llp_id2 INT FK >- llp_domains.llp_id
+llp_title2 VARCHAR
+url_address VARCHAR(45)
+address VARCHAR(60)
+postal_code VARCHAR(6)
+telephone_no VARCHAR(8)
+telephone_no_2 VARCHAR(8)
+fax_no VARCHAR(8)
+fax_no_2 VARCHAR(8)
+email_address VARCHAR(30)
+mrt_desc VARCHAR(60)
+bus_desc VARCHAR
+principal_name VARCHAR
+first_vp_name VARCHAR
+second_vp_name VARCHAR
+third_vp_name VARCHAR
+fourth_vp_name VARCHAR
+fifth_vp_name VARCHAR
+sixth_vp_name VARCHAR
+dgp_code VARCHAR(30)
+zone_code VARCHAR(10)
+type_code VARCHAR(30)
+nature_code VARCHAR(30)
+session_code VARCHAR(30)
+mainlevel_code VARCHAR(20)
+sap_ind BOOLEAN
+autonomous_ind BOOLEAN
+gifted_ind BOOLEAN
+ip_ind BOOLEAN
+
+
+languages_spoken
+-
+school_id INT FK -< school_information.school_id
+language_id INT FK -< mothertongues.language_id
+
+
+mothertongues
+-
+language_id PK INT
+language VARCHAR(10)
+
+school_subjects
+-
+school_id INT FK >- school_information.school_id
+subjects_id INT FK >- subjects.subject_id
+
+subjects
+-
+subject_id PK INT
+subject_name VARCHAR
+
+school_moe
+-
+school_id INT FK >- school_information.school_id
+moe_id INT FK >- moe.moe_id
+
+moe
+-
+moe_id PK INT
+moe_name VARCHAR
+
+co_curricular_activities
+-
+activity_key PK SERIAL
+generic_name VARCHAR(20)
+school_id INT FK >- school_information.school_id
+grouping_desc VARCHAR(20)
+customized_name VARCHAR(20)
+
