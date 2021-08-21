@@ -13,6 +13,10 @@ Import Data into Pandas
 Clean Data
 	Dion: Clean General Information of Schools
 
+Split clean pandas data into new tables to use pd.to_sql() on
+
+
+
 
 Data in 3rd Normal Form:
   1) All Attributes are solely dependent on 1 key
