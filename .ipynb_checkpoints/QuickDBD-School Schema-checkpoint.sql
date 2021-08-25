@@ -21,7 +21,7 @@ CREATE TABLE "school_information" (
     "llp_title1" VARCHAR,
     "llp_id2" INT,
     "llp_title2" VARCHAR,
-    "url_address" VARCHAR(45 ,
+    "url_address" VARCHAR(45),
     "address" VARCHAR(60),
     "postal_code" VARCHAR(6),
     "telephone_no" VARCHAR(8),
