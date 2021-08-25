@@ -5,16 +5,16 @@
 
 CREATE TABLE "school_information" (
     "school_id" INT   NOT NULL,
-    "school_name" VARCHAR(60)   NOT NULL,
-    "url_address" VARCHAR(60)   NOT NULL,
-    "address" VARCHAR(60)   NOT NULL,
-    "postal_code" VARCHAR(6)   NOT NULL,
-    "telephone_no" VARCHAR(8)   NOT NULL,
-    "telephone_no_2" VARCHAR(8)   NOT NULL,
-    "fax_no" VARCHAR(8)   NOT NULL,
-    "fax_no_2" VARCHAR(8)   NOT NULL,
-    "email_address" VARCHAR(60)   NOT NULL,
-    "mrt_desc" VARCHAR(60)   NOT NULL,
+    "school_name" VARCHAR   NOT NULL,
+    "url_address" VARCHAR   NOT NULL,
+    "address" VARCHAR   NOT NULL,
+    "postal_code" VARCHAR   NOT NULL,
+    "telephone_no" VARCHAR   NOT NULL,
+    "telephone_no_2" VARCHAR   NOT NULL,
+    "fax_no" VARCHAR   NOT NULL,
+    "fax_no_2" VARCHAR   NOT NULL,
+    "email_address" VARCHAR   NOT NULL,
+    "mrt_desc" VARCHAR   NOT NULL,
     "bus_desc" VARCHAR   NOT NULL,
     "principal_name" VARCHAR   NOT NULL,
     "first_vp_name" VARCHAR   NOT NULL,
@@ -23,12 +23,12 @@ CREATE TABLE "school_information" (
     "fourth_vp_name" VARCHAR   NOT NULL,
     "fifth_vp_name" VARCHAR   NOT NULL,
     "sixth_vp_name" VARCHAR   NOT NULL,
-    "dgp_code" VARCHAR(30)   NOT NULL,
-    "zone_code" VARCHAR(10)   NOT NULL,
-    "type_code" VARCHAR(60)   NOT NULL,
-    "nature_code" VARCHAR(60)   NOT NULL,
-    "session_code" VARCHAR(60)   NOT NULL,
-    "mainlevel_code" VARCHAR(60)   NOT NULL,
+    "dgp_code" VARCHAR   NOT NULL,
+    "zone_code" VARCHAR   NOT NULL,
+    "type_code" VARCHAR   NOT NULL,
+    "nature_code" VARCHAR   NOT NULL,
+    "session_code" VARCHAR   NOT NULL,
+    "mainlevel_code" VARCHAR   NOT NULL,
     "sap_ind" BOOLEAN   NOT NULL,
     "autonomous_ind" BOOLEAN   NOT NULL,
     "gifted_ind" BOOLEAN   NOT NULL,
@@ -61,16 +61,16 @@ CREATE TABLE "subjects" (
 );
 
 CREATE TABLE "school_moe" (
-    "school_name" INT   NOT NULL,
+    "school_name" VARCHAR   NOT NULL,
     "moe_program" VARCHAR   NOT NULL
 );
 
 CREATE TABLE "co_curricular_activities" (
     "activity_key" SERIAL   NOT NULL,
-    "school_section" VARCHAR(50)   NOT NULL,
-    "generic_name" VARCHAR(50)   NOT NULL,
-    "grouping_desc" VARCHAR(50)   NOT NULL,
-    "customized_name" VARCHAR(50)   NOT NULL,
+    "school_section" VARCHAR   NOT NULL,
+    "generic_name" VARCHAR   NOT NULL,
+    "grouping_desc" VARCHAR   NOT NULL,
+    "customized_name" VARCHAR   NOT NULL,
     "school_id" INT   NOT NULL,
     CONSTRAINT "pk_co_curricular_activities" PRIMARY KEY (
         "activity_key"
